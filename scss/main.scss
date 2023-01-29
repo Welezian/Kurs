@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.4rem;
+	background-color: #2e353d;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: 1.2em 1.2em;
+	margin: 10% auto;
+	max-width: 375px;
+	height: auto;
+	background-color: #fff5e7;
+	color: #000;
+
+	&__hero {
+		width: 100%;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+	}
+
+	&__text {
+		padding: 1em 1.5em;
+		text-align: left;
+		background-color: #fff;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+
+		p {
+			margin: 1em 0;
+			color: rgb(144, 144, 144);
+			line-height: 1.6em;
+		}
+
+		&-category {
+			text-align: left;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			color: rgb(198, 198, 198);
+			font-size: 1.3rem;
+			font-weight: 300;
+			letter-spacing: 3px;
+		}
+		&-title {
+			font-family: 'Fraunces', serif;
+			font-size: 3.2rem;
+		}
+	}
+	&__price {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		flex-wrap: wrap;
+
+		&-actual {
+			font-family: 'Fraunces', serif;
+			padding: 0;
+			justify-content: left;
+			color: #427050;
+			font-size: 3rem;
+			font-weight: 700;
+		}
+		&-old {
+			margin: auto 1em;
+			color: #989898;
+			text-decoration: line-through;
+			font-size: 1.4rem;
+		}
+	}
+	&__btn {
+		padding: 1em 0;
+
+		&-add {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			background-color: #427050;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+			padding: 1em 0;
+			border-radius: 8px;
+			border: none;
+			color: #fff;
+			font-weight: 700;
+			font-size: 1.5rem;
+			flex-wrap: wrap;
+			transition: background-color 0.4s;
+
+			&:hover {
+				background-color: rgb(39, 95, 59);
+				cursor: pointer;
+			}
+			&--icon {
+				position: absolute;
+				right: 58%;
+				margin: 0 2em;
+			}
+		}
+	}
+}
+
+.attribution {
+	padding: 2em 0;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+}
+
+@media (min-width: 1100px) {
+	.card {
+		display: flex;
+		flex-direction: row;
+		min-width: 700px;
+		width: 60%;
+		margin: 10% auto;
+		background-color: #fff5e7;
+		
+		&__img {
+			width: 50%;
+		}
+
+		&__hero {
+			background-image: url('../images/image-product-desktop.jpg');
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			border-bottom-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		border-top-right-radius: 0px;
+
+		}
+		&__text {
+			width: 50%;
+			padding: 0 2.1em;
+			border-bottom-right-radius: 8px;
+		border-top-right-radius: 8px;
+		border-bottom-left-radius: 0;
+			&-category {
+				padding-top: 2.1em;
+			}
+		}
+		&__price {
+			padding: 1.4em 0;
+		}
+		&__btn {
+			padding-bottom: 2em;
+		}
+	}
+}
